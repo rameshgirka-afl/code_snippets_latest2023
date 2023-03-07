@@ -1,12 +1,28 @@
-nums = [1,2,3,4,5,6,7,8,9,10]
+nums = [1,2,3,4,5,6,7,8,9,10] # iterables CSV, string, numbers, bytes, streams
+numArray=[1,2,[3,4,5],6,7,[8,9,10]] #list of lists
+comboList = list(nums.extend(numArray)) # list builtin functions - passing iterables. 
+comprehendedList = [n for n in comboList]
+
+
+print(comprehendedList)
 
 # I want 'n' for each 'n' in nums
 my_list = []
 for n in nums:
   my_list.append(n)
-print my_list
 
-print [n for n in nums]
+kv_tup = (('IND',"india"),("SL","SRI LANKA"))
+map_tup = kv_tup
+
+list_extension = dict(map_tup,keyword="arguments")
+
+try:
+  extended_list = my_list.extend(list_extension)
+  print (extended_list)
+except Exception as error:
+  print(error)
+
+#print ([n for n in nums])
 
 # I want 'n*n' for each 'n' in nums
 # my_list = []
